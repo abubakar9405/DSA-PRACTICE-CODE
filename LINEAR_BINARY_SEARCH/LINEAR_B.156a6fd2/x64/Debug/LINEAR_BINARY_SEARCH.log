@@ -1,0 +1,4 @@
+﻿  FUNCTIONS.cpp
+C:\Users\abuba\OneDrive\Documents\NUCES-FAST\Semester-3\DSA\self work\LINEAR_BINARY_SEARCH\FUNCTIONS.cpp(14,11): warning C4101: 'mid': unreferenced local variable
+C:\Users\abuba\OneDrive\Documents\NUCES-FAST\Semester-3\DSA\self work\LINEAR_BINARY_SEARCH\FUNCTIONS.cpp(36,1): warning C4715: 'binarysearch': not all control paths return a value
+  LINEAR_BINARY_SEARCH.vcxproj -> C:\Users\abuba\OneDrive\Documents\NUCES-FAST\Semester-3\DSA\self work\LINEAR_BINARY_SEARCH\x64\Debug\LINEAR_BINARY_SEARCH.exe

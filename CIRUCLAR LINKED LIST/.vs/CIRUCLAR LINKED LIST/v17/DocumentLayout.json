@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\abuba\\OneDrive\\Documents\\NUCES-FAST\\Semester-3\\DSA\\self work\\CIRUCLAR LINKED LIST\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2869D72-5FEA-4CB7-8481-47F2AD5CD403}|CIRUCLAR LINKED LIST.vcxproj|C:\\Users\\abuba\\OneDrive\\Documents\\NUCES-FAST\\Semester-3\\DSA\\self work\\CIRUCLAR LINKED LIST\\CIRCULARLINKEDLIST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2869D72-5FEA-4CB7-8481-47F2AD5CD403}|CIRUCLAR LINKED LIST.vcxproj|solutionrelative:CIRCULARLINKEDLIST.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CIRCULARLINKEDLIST.cpp",
+              "DocumentMoniker": "C:\\Users\\abuba\\OneDrive\\Documents\\NUCES-FAST\\Semester-3\\DSA\\self work\\CIRUCLAR LINKED LIST\\CIRCULARLINKEDLIST.cpp",
+              "RelativeDocumentMoniker": "CIRCULARLINKEDLIST.cpp",
+              "ToolTip": "C:\\Users\\abuba\\OneDrive\\Documents\\NUCES-FAST\\Semester-3\\DSA\\self work\\CIRUCLAR LINKED LIST\\CIRCULARLINKEDLIST.cpp",
+              "RelativeToolTip": "CIRCULARLINKEDLIST.cpp",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-14T12:44:50.119Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
