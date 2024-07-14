@@ -16,8 +16,5 @@ int main(){
     }
     else{
         cout<<c<<" c is the greates number \n";
-    }
-    
-
-    
+    }    
 }
