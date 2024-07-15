@@ -19,7 +19,7 @@ public:
     // Other operations of circular linked list
     void insertion_LINKEDLIST() {
         node* q = this;
-        cout << "Input data of your circular linked list\n";
+        cout<< "Input data of your circular linked list\n";
         do {
             cin >> q->data;
             q = q->next;
