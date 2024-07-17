@@ -1,6 +1,20 @@
 #include<iostream>
 using namespace std;
+
+
+class stack
+{
+private:
+    
+    
+public:
+
+};
+
+
+
 int main(){
-    cout<<"hello world\n";
-    return 0;
+  
+
+
 }
