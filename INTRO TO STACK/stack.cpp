@@ -56,6 +56,7 @@ else{
 
 
 int main(){
+    // IS APPLICABLE BY BOTH USING OBJECT OF STACK OR BY POINTER...
 //   stack S;
 //   S.size=80;
 //   S.top=-1;
