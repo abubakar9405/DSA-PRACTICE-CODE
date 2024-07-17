@@ -39,18 +39,15 @@ void INSERTION(){
             break;
 
         case 2: // Insertion at tail
-            while (temp->next != nullptr) {
-                temp = temp->next;
-            }
-            temp->next = new NODE();
-            temp->next->previous = temp;
-            temp = temp->next;
-            temp->next = nullptr;
-            cout << "Enter data for your tail: ";
-            cin >> temp->data;
-            break;
-
-        case 3: // Insertion at any specific index
+        //   NODE* newNode = new NODE();
+    NODE* temp = this;
+    while (temp->next != nullptr) {
+        temp = temp->next;
+    }
+    int a;
+    cin>>temp->next->data;
+    a=temp->next->data;
+          case 3: // Insertion at any specific index
             int index;
             cout << "Enter index at which you want to enter value: ";
             cin >> index;
