@@ -63,6 +63,21 @@ int main() {
     cout << "STACK HAS BEEN CREATED SUCCESSFULLY\n";
     cout << "Checking empty and full status before updating\n";
     sp->print_status();
+    //IF YOU WANT USER INPUT IN  STACK UNCOMMENT THE CODE GIVEN BELOW...
+//int temp_Size;
+// cout<<"enter how many element you want to enter in your stack\n";
+// cout<<"max capacity of stack for now is 10\n";
+// cin>>temp_Size;
+// if (temp_Size>10&&temp_Size<1)
+// {
+//     cout<<"invalid input\n";
+// }
+// int j;//to input value in the loop for stack ...
+// for(int i=0;i<temp_Size;i++){
+//   cout<<"enter your value "<<i+1<<" to fill up stack \n";
+//    cin>>j;
+//    sp->push(j);
+//    }
 
     sp->push(10);
     sp->push(20);
@@ -90,18 +105,3 @@ int main() {
     delete sp;
     return 0;
 }
-//IF YOU WANT USER INPUT IN  STACK UNCOMMENT THE CODE GIVEN BELOW...
-//int temp_Size;
-// cout<<"enter how many element you want to enter in your stack\n";
-// cout<<"max capacity of stack for now is 10\n";
-// cin>>temp_Size;
-// if (temp_Size>10&&temp_Size<1)
-// {
-//     cout<<"invalid input\n";
-// }
-// int j;//to input value in the loop for stack ...
-// for(int i=0;i<temp_Size;i++){
-//   cout<<"enter your value "<<i+1<<" to fill up stack \n";
-//    cin>>j;
-//    sp->push(j);
-//    }
