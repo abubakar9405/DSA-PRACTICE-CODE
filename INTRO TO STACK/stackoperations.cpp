@@ -51,6 +51,14 @@ public:
         }
         cout << "\n";
     }
+    int peek_opt(){
+        if (this->top==-1)
+        {
+            cout<<"YOUR STACK IS EMPTY\n";
+        }
+        
+       return this->arr[this->top];
+    }
 
     void print_status() {
         cout << "Stack is " << (is_empty() ? "empty" : "not empty") << "\n";
@@ -64,7 +72,7 @@ int main() {
     cout << "Checking empty and full status before updating\n";
     sp->print_status();
     //IF YOU WANT USER INPUT IN  STACK UNCOMMENT THE CODE GIVEN BELOW...
-//int temp_Size;
+// int temp_Size;
 // cout<<"enter how many element you want to enter in your stack\n";
 // cout<<"max capacity of stack for now is 10\n";
 // cin>>temp_Size;
@@ -97,10 +105,19 @@ int main() {
     sp->pop();
     sp->pop();
     sp->pop();
+    sp->pop();
+    sp->pop();
+    sp->pop();
+    sp->pop();
+    sp->pop();
+    sp->pop();
+    sp->pop();
 
     cout << "TRAVERSING AFTER POPPING\n";
     sp->traverse_stack();
     sp->print_status();
+    cout<<"value of top after popping out is \n";
+    cout<<sp->top;//indicates that the top is empty..
 
     delete sp;
     return 0;
