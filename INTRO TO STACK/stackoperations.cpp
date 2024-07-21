@@ -41,22 +41,28 @@ public:
         return arr[top--];
     }
 
-    void traverse_stack() {
-        if (is_empty()) {
-            cout << "Stack is empty\n";
-            return;
-        }
-        for (int i = 0; i <= top; i++) {
-            cout << arr[i] << " ";
-        }
-        cout << "\n";
-    }
+    // void traverse_stack() {
+    //     if (is_empty()) {
+    //         cout << "Stack is empty\n";
+    //         return;
+    //     }
+    //     for (int i = 0; i <= top; i++) {
+    //         cout << arr[i] << " ";
+    //     }
+    //     cout << "\n";
+    // }
     int peek_opt(int position){
         if (this->top-position+1<0)
         {
             cout<<"NOT A VALID POSITION\n";
         }
        return this->arr[this->top-position+1];
+    }
+    int stack_TOP(){
+        return this->arr[this->top];
+    }
+    int stack_BOTTOM(){
+        return this->arr[0];
     }
 
     void print_status() {
@@ -97,6 +103,9 @@ int main() {
     sp->push(80);
     sp->push(90);
     sp->push(100);
+    cout<<"CHECKING STACK TOP AND BOTTOM FUNCTION BEFORE POPPING \n";
+  cout<<"top of stack is : "<<sp->stack_TOP()<<"\n";
+  cout<<"bottom of stack is : "<<sp->stack_BOTTOM()<<"\n";
     cout<<"VALUE OF TOP IS :"<< sp->top<<endl;
 
     cout << "PEEKING  BEFORE POPPING\n";
@@ -124,6 +133,9 @@ int main() {
     cout<<"the value at position "<<i<<" is "<<sp->peek_opt(i)<<" \n";
    }
   sp->print_status();
+  cout<<"CHECKING STACK TOP AND BOTTOM FUNCTION AFTER POPPING \n";
+  cout<<"top of stack is : "<<sp->stack_TOP()<<"\n";
+  cout<<"bottom of stack is : "<<sp->stack_BOTTOM()<<"\n";
 
     delete sp;
     return 0;
