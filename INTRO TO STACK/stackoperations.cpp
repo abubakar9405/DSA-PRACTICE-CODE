@@ -70,6 +70,7 @@ int main() {
     cout << "STACK HAS BEEN CREATED SUCCESSFULLY\n";
     cout << "Checking empty and full status before updating\n";
     sp->print_status();
+    cout<<"VALUE OF TOP IS :"<< sp->top<<endl;
     //IF YOU WANT USER INPUT IN  STACK UNCOMMENT THE CODE GIVEN BELOW...
 // int temp_Size;
 // cout<<"enter how many element you want to enter in your stack\n";
@@ -96,14 +97,18 @@ int main() {
     sp->push(80);
     sp->push(90);
     sp->push(100);
+    cout<<"VALUE OF TOP IS :"<< sp->top<<endl;
 
-    cout << "TRAVERSING BEFORE POPPING\n";
-    sp->traverse_stack();
+    cout << "PEEKING  BEFORE POPPING\n";
+    for (int  i = 1; i <sp->top+2; i++)
+   {
+    cout<<"the value at position "<<i<<" is "<<sp->peek_opt(i)<<" \n";
+   }
     sp->print_status();
 //popping comment out due to testing of peek opt... for a while only...
-    // sp->pop();
-    // sp->pop();
-    // sp->pop();
+    sp->pop();
+    sp->pop();
+    sp->pop();
     // sp->pop();
     // sp->pop();
     // sp->pop();
@@ -112,11 +117,13 @@ int main() {
     // sp->pop();
     // sp->pop();
 
-    cout << "TRAVERSING AFTER POPPING\n";
-    sp->traverse_stack();
-    sp->print_status();
-    cout<<"value of top after popping out is \n";
-    cout<<sp->top;//indicates that the top is empty..
+    // cout << "PEEKING INTO THE STACK\n";
+    cout<<"VALUE OF TOP IS :"<< sp->top<<endl;
+   for (int  i = 1; i <sp->top+2; i++)
+   {
+    cout<<"the value at position "<<i<<" is "<<sp->peek_opt(i)<<" \n";
+   }
+  sp->print_status();
 
     delete sp;
     return 0;
