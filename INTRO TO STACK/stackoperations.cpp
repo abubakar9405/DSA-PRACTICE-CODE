@@ -51,13 +51,12 @@ public:
         }
         cout << "\n";
     }
-    int peek_opt(){
-        if (this->top==-1)
+    int peek_opt(int position){
+        if (this->top-position+1<0)
         {
-            cout<<"YOUR STACK IS EMPTY\n";
+            cout<<"NOT A VALID POSITION\n";
         }
-        
-       return this->arr[this->top];
+       return this->arr[this->top-position+1];
     }
 
     void print_status() {
@@ -101,17 +100,17 @@ int main() {
     cout << "TRAVERSING BEFORE POPPING\n";
     sp->traverse_stack();
     sp->print_status();
-
-    sp->pop();
-    sp->pop();
-    sp->pop();
-    sp->pop();
-    sp->pop();
-    sp->pop();
-    sp->pop();
-    sp->pop();
-    sp->pop();
-    sp->pop();
+//popping comment out due to testing of peek opt... for a while only...
+    // sp->pop();
+    // sp->pop();
+    // sp->pop();
+    // sp->pop();
+    // sp->pop();
+    // sp->pop();
+    // sp->pop();
+    // sp->pop();
+    // sp->pop();
+    // sp->pop();
 
     cout << "TRAVERSING AFTER POPPING\n";
     sp->traverse_stack();
