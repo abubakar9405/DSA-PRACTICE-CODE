@@ -45,6 +45,51 @@ public:
         this->current_Size--; // Decrement the current size
         return poppedValue;
     }
+
+    int peek(int pos) {
+        if (pos <= 0 || pos > this->current_Size) {
+            cout << "Invalid position\n";
+            return -1; // Indicating invalid position
+        }
+
+        STACK_NODE* temp = this->next; // Start from the top of the stack
+        for (int i = 1; i < pos; i++) {
+            temp = temp->next; // Move to the next node
+        }
+
+        return temp->data; // Return the data of the node at the specified position
+    }
+
+    int STACK_TOP(){
+        if (is_empty()) {
+            cout << "STACK IS EMPTY\n";
+            return -1; // Indicating empty stack
+        }
+        return this->next->data;
+    }
+
+    int STACK_BOTTOM() {
+        if (is_empty()) {
+            cout << "STACK IS EMPTY\n";
+            return -1; // Indicating empty stack
+        }
+
+        STACK_NODE* temp = this->next;
+        while (temp->next != NULL) {
+            temp = temp->next;
+        }
+        return temp->data;
+    }
+
+    void display() {
+        STACK_NODE* temp = this->next;
+        cout << "Stack: ";
+        while (temp != NULL) {
+            cout << temp->data << " ";
+            temp = temp->next;
+        }
+        cout << endl;
+    }
 };
 
 int main() {
@@ -55,13 +100,24 @@ int main() {
     head->stack_push(7);
     head->stack_push(8);
     head->stack_push(10);
-   // head->stack_push(11); // To check stack overflow condition at size 5
+    head->display();
+    cout << "CHECKING STACK TOP AND BOTTOM BEFORE POPPING\n";
+    cout << "TOP VALUE OF THE STACK IS: " << head->STACK_TOP() << endl;
+    cout << "BOTTOM VALUE OF THE STACK IS: " << head->STACK_BOTTOM() << endl;
+    
+    // Uncomment this line to check stack overflow condition at size 5
+    // head->stack_push(11);
 
-    cout << "POPPING VALUES\n";
-    // while (!head->is_empty()) {
-    //     cout << head->stack_pop() << endl;
-    // }
-    head->stack_pop(); // To check stack underflow condition
+    head->stack_pop(); 
+    head->stack_pop(); 
+    head->stack_pop(); 
+    head->display();
+
+    cout << "\nPEEKING IN THE STACK\n";
+    cout << head->peek(2) << endl;
+    cout << "CHECKING STACK TOP AND BOTTOM AFTER POPPING \n";
+    cout << "TOP VALUE OF THE STACK IS: " << head->STACK_TOP() << endl;
+    cout << "BOTTOM VALUE OF THE STACK IS: " << head->STACK_BOTTOM() << endl;
 
     return 0;
 }
