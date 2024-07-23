@@ -53,15 +53,30 @@ if (this->top-pos+1<0)
             cout<<"NOT A VALID POSITION\n";
         }
        return this->arr[this->top-pos+1];
-
 }
+bool is_BALANCED(char left,char right){
+    //catered the check if the push is in balanced form or not.
+           if ((left == '(' && right == ')')||left == ('{' && right == '}')||left == ('[' && right == ']'))
+           {
+            return true;
+           }        
+           else{
+            return false;
+           }
+}
+bool isBalancedParentheses(string s) {
+    stack_parenthesis_matching stack(s.length());
+
+    for (char c : s) {
+        if (c == '(' || c == '{' || c == '[') {
+            stack.push(c);
+        } else if (c == ')' || c == '}' || c == ']') {
+            if (stack.isEmpty() || !is_BALANCED(stack.pop(), c)) {
+                return false;
+            }
+        }
+    }
+    return stack.isEmpty();
+}
+
 };
-
-int main(){
-
-
-
-
-
-
-}
