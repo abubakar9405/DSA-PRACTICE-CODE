@@ -8,7 +8,7 @@ public:
     int size; // Maximum size of the stack
     int current_Size; // Current number of elements in the stack
 
-    STACK_NODE(int stack_Size) : size(stack_Size), current_Size(0), next(NULL) {
+    STACK_NODE(int stack_Size) : size(stack_Size), current_Size(0), next(nullptr) {
         // Constructor using initializer list
     }
 
@@ -101,9 +101,10 @@ int main() {
     head->stack_push(8);
     head->stack_push(10);
     head->display();
-    cout<<"peeking at 1 after pushing the data into stack \n";
-    cout<<" \n";
-    cout<<endl<<head->peek(6);
+    
+    cout << "PEEKING AT 1 AFTER PUSHING THE DATA INTO STACK\n";
+    cout << head->peek(1) << endl;
+
     cout << "CHECKING STACK TOP AND BOTTOM BEFORE POPPING\n";
     cout << "TOP VALUE OF THE STACK IS: " << head->STACK_TOP() << endl;
     cout << "BOTTOM VALUE OF THE STACK IS: " << head->STACK_BOTTOM() << endl;
@@ -117,8 +118,9 @@ int main() {
     head->display();
 
     cout << "\nPEEKING IN THE STACK\n";
-    cout << head->peek(2) << endl;
-    cout << "CHECKING STACK TOP AND BOTTOM AFTER POPPING \n";
+    cout << head->peek(1) << endl;
+
+    cout << "CHECKING STACK TOP AND BOTTOM AFTER POPPING\n";
     cout << "TOP VALUE OF THE STACK IS: " << head->STACK_TOP() << endl;
     cout << "BOTTOM VALUE OF THE STACK IS: " << head->STACK_BOTTOM() << endl;
 
