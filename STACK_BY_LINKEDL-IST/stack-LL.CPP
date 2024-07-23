@@ -101,6 +101,9 @@ int main() {
     head->stack_push(8);
     head->stack_push(10);
     head->display();
+    cout<<"peeking at 1 after pushing the data into stack \n";
+    cout<<" \n";
+    cout<<endl<<head->peek(6);
     cout << "CHECKING STACK TOP AND BOTTOM BEFORE POPPING\n";
     cout << "TOP VALUE OF THE STACK IS: " << head->STACK_TOP() << endl;
     cout << "BOTTOM VALUE OF THE STACK IS: " << head->STACK_BOTTOM() << endl;
