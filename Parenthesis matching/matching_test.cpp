@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
 
-class stack_parenthesis_matching {
+class INFIX_TO_POSTFIX {
 public:
     // All data members public to avoid uncertain blockages...
     int capacity, top;
     char* arr;
 
-    stack_parenthesis_matching(int size) : capacity(size), top(-1) { // Used initializer list
+    INFIX_TO_POSTFIX(int size) : capacity(size), top(-1) { // Used initializer list
         arr = new char[capacity];
     }
 
-    ~stack_parenthesis_matching() {
+    ~INFIX_TO_POSTFIX() {
         delete[] arr;
     }
 
@@ -62,7 +62,7 @@ public:
     }
 
     bool isBalancedParentheses(const string& s) {
-        stack_parenthesis_matching stack(s.length()); // Instance plus use of built-in length function
+        INFIX_TO_POSTFIX stack(s.length()); // Instance plus use of built-in length function
 
         for (char c : s) {
             if (c == '(' || c == '{' || c == '[') {
@@ -85,19 +85,19 @@ int main() {
     string test4 = "([)]";
     string test5 = "{[]}";
 
-    stack_parenthesis_matching spm1(test1.length());
+    INFIX_TO_POSTFIX spm1(test1.length());
     cout << test1 << " : " << (spm1.isBalancedParentheses(test1) ? "Balanced" : "Not Balanced") << endl;
 
-    stack_parenthesis_matching spm2(test2.length());
+    INFIX_TO_POSTFIX spm2(test2.length());
     cout << test2 << " : " << (spm2.isBalancedParentheses(test2) ? "Balanced" : "Not Balanced") << endl;
 
-    stack_parenthesis_matching spm3(test3.length());
+    INFIX_TO_POSTFIX spm3(test3.length());
     cout << test3 << " : " << (spm3.isBalancedParentheses(test3) ? "Balanced" : "Not Balanced") << endl;
 
-    stack_parenthesis_matching spm4(test4.length());
+    INFIX_TO_POSTFIX spm4(test4.length());
     cout << test4 << " : " << (spm4.isBalancedParentheses(test4) ? "Balanced" : "Not Balanced") << endl;
 
-    stack_parenthesis_matching spm5(test5.length());
+    INFIX_TO_POSTFIX spm5(test5.length());
     cout << test5 << " : " << (spm5.isBalancedParentheses(test5) ? "Balanced" : "Not Balanced") << endl;
 
     return 0;
