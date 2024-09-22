@@ -58,7 +58,28 @@ tail->next=head;
 
 
 }
-void Insertion_After_v1
+void Insertion_After(T const v1,T const element){//v1 is the data
+NODE*current=head;
+NODE*newnode=new NODE(element);
+//edge cases
+if(head==NULL)
+{
+    cout<<"no element is present so insertion cannot be processed\n";
+    return;
+}
+
+while(current->data!=v1){
+
+    current=current->next;
+}
+//at node after which insertion is required...
+NODE*temp;
+temp=current->next;
+current->next=newnode;
+newnode->next=temp;
+newnode->prev=current;
+tail->next=head;
+}
 void print(){
     if (head==NULL){return;/*no element in the list*/}    
     NODE*current=head;
@@ -69,7 +90,6 @@ void print(){
     }while (current!=head);
      cout << "(head)" << endl; // Indicate circularity
     }
-    
 };
 
 
@@ -92,6 +112,8 @@ obj.Insertion_At_End(7);
 obj.Insertion_At_End(7);
 obj.Insertion_At_End(5);
 obj.Insertion_At_Start(1);
+obj.print();
+obj.Insertion_After(3,12);
 obj.print();
 
 
